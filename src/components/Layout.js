@@ -4,6 +4,9 @@ import { adminMenu, userMenu } from "./../Data/data";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Badge, message } from "antd";
+import Footer from "./Footer"
+import Topbar from "./Topbar"
+import Navbar from "./Navbar"
 const Layout = ({ children }) => {
   const { user } = useSelector((state) => state.user);
   const location = useLocation();
@@ -53,7 +56,7 @@ const Layout = ({ children }) => {
         <div className="layout">
           <div className="sidebar">
             <div className="logo">
-              <h6 className="text-light">YM.hos</h6>
+              <h6 className="text-light"><Link className="text-light" to="/">YM.hos</Link></h6>
               <hr />
             </div>
             <div className="menu">
@@ -93,6 +96,7 @@ const Layout = ({ children }) => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
