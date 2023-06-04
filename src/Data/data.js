@@ -5,6 +5,11 @@ export const userMenu = [
     icon: "fa-solid fa-house",
   },
   {
+    name:"display",
+    path:"/dashboard",
+    icon:"fa-solid fa-display-medical"
+  },
+  {
     name: "Appointments",
     path: "/appointments",
     icon: "fa-solid fa-list",
@@ -28,7 +33,11 @@ export const adminMenu = [
     path: "/",
     icon: "fa-solid fa-house",
   },
-
+  {
+    name:"display",
+    path:"/dashboard",
+    icon:"fa-solid fa-display-medical"
+  },
   {
     name: "Doctors",
     path: "/admin/doctors",
