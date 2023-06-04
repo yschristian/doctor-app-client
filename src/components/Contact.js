@@ -19,7 +19,7 @@ const Contact = () => {
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p>Kigali Rwanda</p>
               </div>
 
               <div class="email">
@@ -31,7 +31,7 @@ const Contact = () => {
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p>+250784381529</p>
+                <p><a href="tel:+250784381529">+250784381529</a></p>
               </div>
 
             </div>
