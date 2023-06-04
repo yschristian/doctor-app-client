@@ -25,13 +25,13 @@ const Contact = () => {
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>info@example.com</p>
+                <p><a href="mailto:yschristian7@gmail.com">yschristian7@gmail.com</a></p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
+                <p>+250784381529</p>
               </div>
 
             </div>

@@ -1,7 +1,6 @@
 import React from "react";
 import "../styles/LayoutStyles.css";
 import { adminMenu, userMenu } from "./../Data/data";
-
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Badge, message } from "antd";
@@ -22,6 +21,11 @@ const Layout = ({ children }) => {
       name: "Home",
       path: "/",
       icon: "fa-solid fa-house",
+    },
+    {
+      name:"display",
+      path:"/dashboard",
+      icon:<i class="fa-solid fa-display-medical"></i>
     },
     {
       name: "Appointments",
@@ -49,7 +53,7 @@ const Layout = ({ children }) => {
         <div className="layout">
           <div className="sidebar">
             <div className="logo">
-              <h6 className="text-light">DOC APP</h6>
+              <h6 className="text-light">YM.hos</h6>
               <hr />
             </div>
             <div className="menu">

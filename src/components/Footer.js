@@ -12,7 +12,7 @@ const Footer = () => {
             <h3>YM.Hos</h3>
             <p>
             <strong>Phone:</strong> +250 7843 815 28<br></br>
-            <strong>Email:</strong> info@example.com<br></br>
+            <strong>Email:</strong> <a href="mailto:yschristian7@gmail.com">yschristian7@gmail.com</a><br></br>
             </p>
           </div>
 

@@ -1103,6 +1103,7 @@ body {
     border-right: 2px solid #ebf1f6;
     font-weight: 600;
     font-size: 15px;
+    text-decoration: none;
   }
   
   .departments .nav-link:hover {
