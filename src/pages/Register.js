@@ -39,7 +39,6 @@ const Register = () => {
           layout="vertical"
           onFinish={onfinishHandler}
           className=" col-md-4 offset-md-5 col-xs-12 bg-light mt-4 pt-4 mb-4 register-form"
-          
         >
           <h3 className="text-center fs-1 fw-bold">Register</h3>
           <Form.Item label="Name" name="name">
