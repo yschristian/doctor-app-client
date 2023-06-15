@@ -49,6 +49,26 @@ const DoctorAppointments = () => {
     }
   };
 
+  const handleReject = async (record, status) => {
+    try {
+      const res = await axios.post(
+        "/api/v1/doctor/reject-status",
+        { appointmentsId: record._id, status },
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      );
+      if (res.data.success) {
+        message.success(res.data.message);
+        getAppointments();
+      }
+    } catch (error) {
+      console.log(error);
+      message.error("Something Went Wrong");
+    }
+  };
   const columns = [
     {
       title: "ID",
@@ -83,7 +103,7 @@ const DoctorAppointments = () => {
               </button>
               <button
                 className="btn btn-danger ms-2"
-                onClick={() => handleStatus(record, "reject")}
+                onClick={() => handleReject(record, "reject")}
               >
                 Reject
               </button>

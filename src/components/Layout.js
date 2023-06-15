@@ -56,7 +56,7 @@ const Layout = ({ children }) => {
         <div className="layout">
           <div className="sidebar">
             <div className="logo">
-              <h6 className="text-light"><Link className="text-light" to="/">YM.hos</Link></h6>
+              <h6 className="text-light"><Link className="text-light" to="/">Dream Medical Hospital</Link></h6>
               <hr />
             </div>
             <div className="menu">
