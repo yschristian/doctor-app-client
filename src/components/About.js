@@ -1,5 +1,5 @@
 import React from 'react'
-import aboutImage from "../img/about.jpg"
+import aboutImage from "../img/about1.jpg"
 
 const About = () => {
   return (
@@ -12,9 +12,8 @@ const About = () => {
           </div>
 
           <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5 mt-5">
-            <h3>Enim quis est voluptatibus aliquid consequatur fugiat</h3>
-            <p>Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus. Non ipsam et sed minima temporibus laudantium. Soluta voluptate sed facere corporis dolores excepturi. Libero laboriosam sint et id nulla tenetur. Suscipit aut voluptate.</p>
-
+            <h3>For he who is in the pursuit of pleasures should avoid something</h3>
+            <p> To be a pleasure or an exercise. We are here to reject the accusation. Not the very least, but the times of praise. They are freed from pleasure, but they will suffer bodily pains. They are free to be laborious and there is no obligation to do so. He accepts either with pleasure.</p>
             <div class="icon-box">
               <div class="icon"><i class="bx bx-fingerprint"></i></div>
               <h4 class="title"><a href="">Lorem Ipsum</a></h4>
@@ -23,14 +22,14 @@ const About = () => {
 
             <div class="icon-box">
               <div class="icon"><i class="bx bx-gift"></i></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+              <p class="description">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
             </div>
 
             <div class="icon-box">
               <div class="icon"><i class="bx bx-atom"></i></div>
-              <h4 class="title"><a href="">Dine Pad</a></h4>
-              <p class="description">Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit. Sunt aut deserunt minus aut eligendi omnis</p>
+              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+              <p class="description">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
             </div>
 
           </div>
