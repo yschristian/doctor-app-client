@@ -14,6 +14,8 @@ const Layout = ({ children }) => {
   // logout funtion
   const handleLogout = () => {
     localStorage.clear();
+    localStorage.removeItem("token")
+    window.location.reload();
     message.success("Logout Successfully");
     navigate("/login");
   };
@@ -28,7 +30,7 @@ const Layout = ({ children }) => {
     {
       name:"display",
       path:"/dashboard",
-      icon:<i class="fa-solid fa-display-medical"></i>
+      icon:"fa-sharp fa-solid fa-calendar-check"
     },
     {
       name: "Appointments",
@@ -52,11 +54,13 @@ const Layout = ({ children }) => {
     : userMenu;
   return (
     <>
-      <div className="main">
+    <Topbar />
+    <Navbar />
+      <div className="main" style={{marginTop: "150px"}} >
         <div className="layout">
           <div className="sidebar">
             <div className="logo">
-              <h6 className="text-light"><Link className="text-light" to="/">Dream Medical Hospital</Link></h6>
+              <h6 className="text-light"><Link className="text-light" to="/">Dream M Center.</Link></h6>
               <hr />
             </div>
             <div className="menu">
@@ -78,7 +82,7 @@ const Layout = ({ children }) => {
             </div>
           </div>
           <div className="content">
-            <div className="header">
+            {/* <div className="header">
               <div className="header-content" style={{ cursor: "pointer" }}>
                 <Badge
                   count={user && user.notifcation.length}
@@ -91,7 +95,7 @@ const Layout = ({ children }) => {
 
                 <Link to="/profile">{user?.name}</Link>
               </div>
-            </div>
+            </div> */}
             <div className="body">{children}</div>
           </div>
         </div>
