@@ -8,7 +8,7 @@ const Contact = () => {
 
         <div class="section-title">
           <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p className='fs-4'>Your Health is Our Priority</p>
         </div>
       </div>
       <div class="container">
@@ -25,13 +25,13 @@ const Contact = () => {
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p><a href="mailto:yschristian7@gmail.com">yschristian7@gmail.com</a></p>
+                <p><a href="mailto:medicaldreamcenter@gmail.com">medicaldreamcenter@gmail.com</a></p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p><a href="tel:+250784381529">+250784381529</a></p>
+                <p><a href="tel:+250788875589">+250788875589</a></p>
               </div>
 
             </div>
