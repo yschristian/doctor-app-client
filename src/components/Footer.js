@@ -11,8 +11,8 @@ const Footer = () => {
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>Dream Medical H.</h3>
             <p>
-            <strong>Phone:</strong><a href="tel:+250784381529">+250788875589</a><br></br>
-            <strong>Email:</strong> <a href="mailto:yschristian7@gmail.com">yschristian7@gmail.com</a><br></br>
+            <strong>Phone:</strong><a href="tel:+250788875589">+250788875589</a><br></br>
+            <strong>Email:</strong> <a href="mailto:medicaldreamcenter@gmail.com">medicaldreamcenter@gmail.com</a><br></br>
             </p>
           </div>
 
@@ -42,10 +42,9 @@ const Footer = () => {
     </div>
 
     <div class="container d-md-flex py-4">
-
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>Dream Medical H.</span></strong>.{new Date().getFullYear()} All Rights Reserved
+          &copy; Copyright <strong><span>Dream Medical Center.</span></strong>.{new Date().getFullYear()} All Rights Reserved
         </div>
      
       </div>
