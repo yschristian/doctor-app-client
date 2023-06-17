@@ -7,7 +7,7 @@ export const userMenu = [
   {
     name:"display",
     path:"/dashboard",
-    icon:"fa-solid fa-display-medical"
+    icon:"fa-sharp fa-solid fa-calendar-check"
   },
   {
     name: "Appointments",
@@ -36,7 +36,7 @@ export const adminMenu = [
   {
     name:"display",
     path:"/dashboard",
-    icon:"fa-solid fa-display-medical"
+    icon:"fa-sharp fa-solid fa-calendar-check"
   },
   {
     name: "Doctors",
