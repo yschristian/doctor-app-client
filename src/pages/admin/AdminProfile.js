@@ -19,7 +19,7 @@ const AdminProfile = () => {
     try {
       dispatch(showLoading());
       const res = await axios.post(
-        "/api/v1/doctor/updateProfile",
+        "https://doctor-app-server.onrender.com/api/v1/doctor/updateProfile",
         {
           ...values,
           userId: user._id,
@@ -53,7 +53,7 @@ const AdminProfile = () => {
   const getDoctorInfo = async () => {
     try {
       const res = await axios.post(
-        "/api/v1/doctor/getDoctorInfo",
+        "https://doctor-app-server.onrender.com/api/v1/doctor/getDoctorInfo",
         { userId: params.id },
         {
           headers: {
