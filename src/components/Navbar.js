@@ -14,7 +14,7 @@ function Navbar() {
   const handleLogout = () => {
     localStorage.clear();
     message.success("Logout Successfully");
-    navigate("/");
+    navigate("/login");
   };
   return (
     <header id="header" class="fixed-top">
@@ -28,7 +28,6 @@ function Navbar() {
               token ? 
              <>
               {/* <li style={{textDecoration:"none"}}><a class="nav-link " ><Link style={{textDecoration:"none"}} to="/dashboard">Dasboard</Link></a></li> */}
-              {/* <li style={{textDecoration:"none"}}><a class="nav-link " ><Link onClick={handleLogout} style={{textDecoration:"none"}} >Logout</Link></a></li> */}
               <div className="header1">
               <div className="header-content" style={{ cursor: "pointer" }}>
                 <Badge
@@ -40,15 +39,18 @@ function Navbar() {
                   <i class="fa-solid fa-bell"></i>
                 </Badge>
 
-                <Link to="/dashboard">{user?.name}</Link>
+                <Link to="/dashboard">{user && user?.name}</Link>
+                <Link to="/login" onClick={handleLogout} style={{textDecoration:"none"}} >Logout</Link>
               </div>
+              
             </div>
+            
              </>
               :
                 <>
                   <li><a class="nav-link scrollto active" href="/">Home</a></li>
-                  <li style={{textDecoration:"none"}}><a class="nav-link " ><Link style={{ textDecoration: "none" }} to="/login">Login</Link></a></li>
-                  <li style={{textDecoration:"none"}}><a class="nav-link " ><Link style={{ textDecoration: "none" }} to="/register">Register</Link></a></li>
+                  <li ><Link class="nav-link "  to="/login">Login</Link></li>
+                  <li ><Link class="nav-link " to="/register">Register</Link></li>
                 </>
             }
           </ul>
