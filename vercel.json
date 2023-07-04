@@ -2,8 +2,8 @@
     "rewrites": [
       {
         "source": "/api/(.*)",
-        "destination": "https://doctor-app-server.onrender.com/api/:splat"
+        "destination": "https://doctor-app-server.onrender.com/api/:1"
       }
     ]
-  }
+}
   
