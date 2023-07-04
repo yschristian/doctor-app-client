@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+      {
+        "source": "/api/(.*)",
+        "destination": "https://doctor-app-server.onrender.com/api/v1/user/login"
+      }
+    ]
+  }
