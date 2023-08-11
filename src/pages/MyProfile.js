@@ -44,9 +44,9 @@ const MyProfile = () => {
             layout="vertical"
             className="m-3"
             initialValues={{
-              ...data,
-              email:data.email,
-              name: data.name
+              email: data.email,
+              name: data.name,
+              status: data.status
             }}
           >
             <h4 className="">Personal Details : </h4>

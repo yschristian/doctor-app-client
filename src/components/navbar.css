@@ -291,6 +291,7 @@ body {
     text-transform: none;
     color: #082744;
     border: none;
+    text-decoration: none;
   }
   
   .navbar .dropdown ul a i {
@@ -1426,6 +1427,9 @@ body {
       position: static;
       left: auto;
     }
+    .word-top{
+       margin-top: 0px !important;
+    }
   }
   
   /*--------------------------------------------------------------
@@ -1738,3 +1742,6 @@ body {
     text-decoration: none;
   }
  
+  .word-top{
+    margin-top: 200px;
+  }

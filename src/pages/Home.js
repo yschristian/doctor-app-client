@@ -8,14 +8,14 @@ import Topbar from '../components/Topbar'
 
 const Home = () => {
   return (
-    <>
+    <div className=''>
       <Topbar />
       <Navbar/>
       <Main />
       <About />
       <Contact />
       <Footer />
-    </>
+    </div>
   )
 }
 
