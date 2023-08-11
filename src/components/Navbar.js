@@ -40,7 +40,7 @@ function Navbar() {
                 </Badge>
 
                 <Link to="/dashboard">{user && user?.name}</Link>
-                <Link to="/login" onClick={handleLogout} style={{textDecoration:"none"}} >Logout</Link>
+                {/* <Link to="/login" onClick={handleLogout} style={{textDecoration:"none"}} >Logout</Link> */}
               </div>
               
             </div>
