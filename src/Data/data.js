@@ -49,6 +49,11 @@ export const adminMenu = [
     icon: "fa-solid fa-user",
   },
   {
+    name: "Contacts",
+    path: "/admin/contacts",
+    icon: "fa-solid fa-user",
+  },
+  {
     name: "Profile",
     path: "/profile",
     icon: "fa-solid fa-user",

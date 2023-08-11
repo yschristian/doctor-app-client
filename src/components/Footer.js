@@ -4,7 +4,6 @@ import "./navbar.css"
 const Footer = () => {
   return (
   <footer id="footer">
-
     <div class="footer-top">
       <div class="container">
         <div class="row">
