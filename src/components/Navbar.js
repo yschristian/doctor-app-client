@@ -22,35 +22,60 @@ function Navbar() {
 
         <h1 class="logo me-auto"><Link to="/"><a >Dream M Center.</a></Link></h1>
 
-        <nav id="navbar"  className={isMenuToggled ? 'navbar order-last order-lg-0' : "navbar-mobile"}>
+        <nav id="navbar" className={isMenuToggled ? 'navbar order-last order-lg-0' : "navbar-mobile"}>
           <ul>
             {
-              token ? 
-             <>
-              {/* <li style={{textDecoration:"none"}}><a class="nav-link " ><Link style={{textDecoration:"none"}} to="/dashboard">Dasboard</Link></a></li> */}
-              <div className="header1">
-              <div className="header-content" style={{ cursor: "pointer" }}>
-                <Badge
-                  count={user && user.notifcation.length}
-                  onClick={() => {
-                    navigate("/notification");
-                  }}
-                >
-                  <i class="fa-solid fa-bell"></i>
-                </Badge>
-
-                <Link to="/dashboard">{user && user?.name}</Link>
-                {/* <Link to="/login" onClick={handleLogout} style={{textDecoration:"none"}} >Logout</Link> */}
-              </div>
-              
-            </div>
-            
-             </>
-              :
+              token ?
                 <>
-                  <li><a class="nav-link scrollto active" href="/">Home</a></li>
-                  <li ><Link class="nav-link "  to="/login">Login</Link></li>
-                  <li ><Link class="nav-link " to="/register">Register</Link></li>
+                  {/* <li style={{textDecoration:"none"}}><a class="nav-link " ><Link style={{textDecoration:"none"}} to="/dashboard">Dasboard</Link></a></li> */}
+                  <div className="header1">
+                    <div className="header-content" style={{ cursor: "pointer" }}>
+                      <Badge
+                        count={user && user.notifcation.length}
+                        onClick={() => {
+                          navigate("/notification");
+                        }}
+                      >
+                        <i class="fa-solid fa-bell"></i>
+                      </Badge>
+
+                      <Link to="/dashboard">dashboard</Link>
+                      <Link to="/dashboard">{user && user?.name}</Link>
+                      {/* <Link to="/login" onClick={handleLogout} style={{textDecoration:"none"}} >Logout</Link> */}
+                    </div>
+
+                  </div>
+
+                </>
+                :
+                <>
+
+                  <li>
+                    <Link className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} to="/">
+                      Home
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} to="/about">
+                      About us
+                    </Link>
+                  </li>
+                  {/* <li>
+                    <Link className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`} to="/contact">
+                      Contact us
+                    </Link>
+                  </li> */}
+                  <li>
+                    <Link className={`nav-link ${location.pathname === '/login' ? 'active' : ''}`} to="/login">
+                      Login
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className={`nav-link ${location.pathname === '/register' ? 'active' : ''}`} to="/register">
+                      Register
+                    </Link>
+                  </li>
+
                 </>
             }
           </ul>

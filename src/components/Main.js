@@ -9,7 +9,7 @@ function Main() {
       <div class="container">
         <h1>Welcome to Dream Medical Center.</h1>
         <h2>We are here to help you, to make appointment with <br></br> doctors of different Clinics and Hospitals</h2>
-       {token ? "" : <Link to="/login"><a class="btn-get-started scrollto">Get Started</a></Link>}
+       {token ? "" : <Link to="/login"><a class="btn-get-started scrollto">Make An Appointments</a></Link>}
       </div>
     </div>
   )
