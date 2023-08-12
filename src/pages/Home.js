@@ -2,9 +2,9 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
-import About from '../components/About'
 import Main from '../components/Main'
 import Topbar from '../components/Topbar'
+import Services from '../components/Services'
 
 const Home = () => {
   return (
@@ -12,7 +12,7 @@ const Home = () => {
       <Topbar />
       <Navbar/>
       <Main />
-      <About />
+      <Services />
       <Contact />
       <Footer />
     </div>

@@ -10,7 +10,7 @@ const MyProfile = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { user } = useSelector((state) => state.user);
-  
+
 
   const getUserInfo = async () => {
     try {
@@ -35,55 +35,57 @@ const MyProfile = () => {
     //eslint-disable-next-line
   }, []);
 
-  console.log(data)
+  console.log("dt", data)
   return (
     <Layout>
-      <h1>Manage Profile</h1>
-      {data && (  
-        <Form
-            layout="vertical"
-            className="m-3"
-            initialValues={{
-              email: data.email,
-              name: data.name,
-              status: data.status
-            }}
-          >
-            <h4 className="">Personal Details : </h4>
-          <Row gutter={20}>
-              <Col xs={24} md={24} lg={8}>
-                <Form.Item
-                  label="Email"
-                  name="email"
-                  required
-                  rules={[{ required: true }]}
-                >
-                  <Input type="text" placeholder="email" />
-                </Form.Item>
-              </Col>
-              <Col xs={24} md={24} lg={8}>
-                <Form.Item
-                  label="Name"
-                  name="name"
-                  required
-                  rules={[{ required: true }]}
-                >
-                  <Input type="text" placeholder="name" />
-                </Form.Item>
-              </Col>
-              <Col xs={24} md={24} lg={8}>
-                <Form.Item
-                  label="Accout status"
-                  name="status"
-                  required
-                  rules={[{ required: true }]}
-                >
-                  <Input type="text" placeholder="my status" />
-                </Form.Item>
-              </Col>
-            </Row>
-            </Form>)}
-    </Layout>
+    <h1>Manage Profile</h1>
+    {data && (
+      <Form
+        layout="vertical"
+        className="m-3"
+        initialValues={{
+          email: data.email,
+          name: data.name,
+          status: data.status,
+        }}
+      >
+        <h4 className="">Personal Details :</h4>
+        <Row gutter={20}>
+          <Col xs={24} md={24} lg={8}>
+            <Form.Item
+              label="Email"
+              name="email"  // Make sure this matches the key in initialValues
+              required
+              rules={[{ required: true }]}
+            >
+              <Input type="text" placeholder="email" />
+            </Form.Item>
+          </Col>
+          <Col xs={24} md={24} lg={8}>
+            <Form.Item
+              label="Name"
+              name="name"  // Make sure this matches the key in initialValues
+              required
+              rules={[{ required: true }]}
+            >
+              <Input type="text" placeholder="name" />
+            </Form.Item>
+          </Col>
+          <Col xs={24} md={24} lg={8}>
+            <Form.Item
+              label="Account status"
+              name="status"  // Make sure this matches the key in initialValues
+              required
+              rules={[{ required: true }]}
+            >
+              <Input type="text" placeholder="my status" />
+            </Form.Item>
+          </Col>
+        </Row>
+      </Form>
+    )}
+  </Layout>
+
   )
 }
 

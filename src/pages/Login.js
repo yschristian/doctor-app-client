@@ -56,6 +56,12 @@ const Login = () => {
           <button className="btn btn-primary" type="submit">
             Login
           </button>
+          <div className="d-flex align-items-center">
+            <p className="m-2">Forgot ?</p>
+            <Link to="/forgotPassword" className="m-2">
+               password
+            </Link>
+          </div>
         </Form>
       </div>
       <Footer />
