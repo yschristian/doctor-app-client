@@ -16,6 +16,9 @@ import Appointments from "./pages/Appointments";
 import DoctorAppointments from "./pages/doctor/DoctorAppointments";
 import Home from "./pages/Home";
 import MyProfile from "./pages/MyProfile";
+import ForgotPassword from "./pages/ForgotPassword"
+import About from "./pages/About";
+
 function App() {
   const { loading } = useSelector((state) => state.alerts);
   return (
@@ -57,7 +60,7 @@ function App() {
                 </ProtectedRoute>
               }
             />
-            <Route 
+            <Route
               path="/profile"
               element={
                 <ProtectedRoute>
@@ -81,16 +84,23 @@ function App() {
                 </ProtectedRoute>
               }
             />
+            <Route path="/about" element={ <About />} />
             <Route
               path="/login"
               element={
-                  <Login />
+                <Login />
+              }
+            />
+            <Route
+              path="/forgotPassword"
+              element={
+                <ForgotPassword />
               }
             />
             <Route
               path="/register"
               element={
-                  <Register />
+                <Register />
               }
             />
             <Route
@@ -117,10 +127,10 @@ function App() {
                 </ProtectedRoute>
               }
             />
-             <Route
+            <Route
               path="/"
               element={
-                  <Home />
+                <Home />
               }
             />
           </Routes>
