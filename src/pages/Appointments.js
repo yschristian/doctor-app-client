@@ -32,7 +32,7 @@ console.log(appointments)
       dataIndex: "name",
       render: (text, record) => (
         <span>
-          {record.doctorId.firstName} {record.doctorId.lastName}
+          Dr. {record.doctorId.firstName} {record.doctorId.lastName}
         </span>
       ),
     },
