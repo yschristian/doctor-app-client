@@ -25,26 +25,22 @@ const Appointments = () => {
   useEffect(() => {
     getAppointments();
   }, []);
-
+console.log(appointments)
   const columns = [
     {
-      title: "ID",
-      dataIndex: "_id",
+      title: "Name",
+      dataIndex: "name",
+      render: (text, record) => (
+        <span>
+          {record.doctorId.firstName} {record.doctorId.lastName}
+        </span>
+      ),
     },
-    // {
-    //   title: "Name",
-    //   dataIndex: "name",
-    //   render: (text, record) => (
-    //     <span>
-    //       {record.doctorInfo.firstName} {record.doctorInfo.lastName}
-    //     </span>
-    //   ),
-    // },
-    // {
-    //   title: "Phone",
-    //   dataIndex: "phone",
-    //   render: (text, record) => <span>{record.doctorInfo.phone}</span>,
-    // },
+    {
+      title: "Phone",
+      dataIndex: "phone",
+      render: (text, record) => <span>{record.doctorId.phone}</span>,
+    },
     {
       title: "Date & Time",
       dataIndex: "date",

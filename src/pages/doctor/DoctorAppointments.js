@@ -28,6 +28,7 @@ const DoctorAppointments = () => {
     getAppointments();
   }, []);
 
+  console.log(appointments)
   const handleStatus = async (record, status) => {
     try {
       const res = await axios.post(
@@ -70,9 +71,18 @@ const DoctorAppointments = () => {
     }
   };
   const columns = [
+    // {
+    //   title: "ID",
+    //   dataIndex: "_id",
+    // },
     {
-      title: "ID",
-      dataIndex: "_id",
+      title:"Name",
+      dataIndex:"name",
+      render:(text ,record) =>(
+        <span>
+            {record.userId.name}
+        </span>
+      )
     },
     {
       title: "Date & Time",

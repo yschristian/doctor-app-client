@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 
 const MyProfile = () => {
-  const [data, setData] = useState([])
+  const [data, setData] = useState(null)
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { user } = useSelector((state) => state.user);
@@ -35,7 +35,6 @@ const MyProfile = () => {
     //eslint-disable-next-line
   }, []);
 
-  console.log("dt", data)
   return (
     <Layout>
     <h1>Manage Profile</h1>
@@ -44,9 +43,7 @@ const MyProfile = () => {
         layout="vertical"
         className="m-3"
         initialValues={{
-          email: data.email,
-          name: data.name,
-          status: data.status,
+          ...data
         }}
       >
         <h4 className="">Personal Details :</h4>
@@ -71,16 +68,16 @@ const MyProfile = () => {
               <Input type="text" placeholder="name" />
             </Form.Item>
           </Col>
-          <Col xs={24} md={24} lg={8}>
+          {/* <Col xs={24} md={24} lg={8}>
             <Form.Item
               label="Account status"
-              name="status"  // Make sure this matches the key in initialValues
+              name="isDoctor"
               required
               rules={[{ required: true }]}
             >
               <Input type="text" placeholder="my status" />
             </Form.Item>
-          </Col>
+          </Col> */}
         </Row>
       </Form>
     )}
