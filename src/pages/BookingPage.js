@@ -15,6 +15,11 @@ const BookingPage = () => {
   const [time, setTime] = useState();
   const [isAvailable, setIsAvailable] = useState(false);
   const dispatch = useDispatch();
+  const minDate = moment().subtract(0, "days")
+  const disabledDate = (current) => {
+    // Disable dates before the minDate
+    return current && current < minDate;
+  };
   // login user data
   const getUserData = async () => {
     try {
@@ -120,6 +125,7 @@ const BookingPage = () => {
                 onChange={(value) => {
                   setDate(moment(value).format("DD-MM-YYYY"));
                 }}
+                disabledDate={disabledDate}
               />
               <TimePicker
                 aria-required={"true"}

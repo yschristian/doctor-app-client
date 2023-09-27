@@ -48,11 +48,11 @@ export const adminMenu = [
     path: "/admin/users",
     icon: "fa-solid fa-user",
   },
-  {
-    name: "Contacts",
-    path: "/admin/contacts",
-    icon: "fa-solid fa-user",
-  },
+  // {
+  //   name: "Contacts",
+  //   path: "/admin/contacts",
+  //   icon: "fa-solid fa-user",
+  // },
   {
     name: "Profile",
     path: "/profile",
