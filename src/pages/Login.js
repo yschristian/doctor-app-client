@@ -1,37 +1,37 @@
-import React from "react";
-import "../styles/RegiserStyles.css";
-import { Form, Input, message } from "antd";
-import { useDispatch } from "react-redux";
-import { showLoading, hideLoading } from "../redux/features/alertSlice";
-import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
-import Topbar from "../components/Topbar";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import { Form, Input, message } from "antd"
+import axios from "axios"
+import React from "react"
+import { useDispatch } from "react-redux"
+import { Link, useNavigate } from "react-router-dom"
+import Footer from "../components/Footer"
+import Navbar from "../components/Navbar"
+import Topbar from "../components/Topbar"
+import { hideLoading, showLoading } from "../redux/features/alertSlice"
+import "../styles/RegiserStyles.css"
 
 const Login = () => {
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
   //form handler
   const onfinishHandler = async (values) => {
     try {
-      dispatch(showLoading());
-      const res = await axios.post("/api/v1/user/login", values);
+      dispatch(showLoading())
+      const res = await axios.post("/api/v1/user/login", values)
       // window.location.reload();
-      dispatch(hideLoading());
+      dispatch(hideLoading())
       if (res.data.success) {
-        localStorage.setItem("token", res.data.token);
-        message.success("Login Successfully");
+        localStorage.setItem("token", res.data.token)
+        message.success("Login Successfully")
         navigate("/dashboard")
       } else {
-        message.error(res.data.message);
+        message.error(res.data.message)
       }
     } catch (error) {
-      dispatch(hideLoading());
-      console.log(error);
-      message.error("something went wrong");
+      dispatch(hideLoading())
+      console.log(error)
+      message.error("something went wrong")
     }
-  };
+  }
   return (
     <>
       <Topbar />
@@ -59,14 +59,14 @@ const Login = () => {
           <div className="d-flex align-items-center">
             <p className="m-2">Forgot ?</p>
             <Link to="/forgotPassword" className="m-2">
-               password
+              password
             </Link>
           </div>
         </Form>
       </div>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default Login;
+export default Login

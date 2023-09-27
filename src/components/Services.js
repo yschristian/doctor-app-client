@@ -22,9 +22,9 @@ const Services = () => {
             </div>
             <h5 className="fw-bold text-center py-1">Advanced equipment</h5>
             <p>
-              Advanced equipment in doctor appointment services refers to
-              state-of-the-art medical technology and tools integrated into the
-              patient care process. These cutting-edge devices enhance the
+              ing-edge devices enhance theAdvanced equipment in doctor
+              appointment services refers to state-of-the-art medical technology
+              and tools integrated into the patient care process. These cutt
               accuracy of diagnoses, improve treatment outcomes, and streamline
               the overall healthcare experience.
             </p>
