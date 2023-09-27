@@ -14,6 +14,7 @@ const Register = () => {
   const dispatch = useDispatch();
   //form handler
   const onfinishHandler = async (values) => {
+    console.log(values)
     try {
       dispatch(showLoading());
       const res = await axios.post("/api/v1/user/register", values);
@@ -32,8 +33,8 @@ const Register = () => {
   };
   return (
     <>
-    <Topbar />
-    <Navbar />
+      <Topbar />
+      <Navbar />
       <div className="form-container ">
         <Form
           layout="vertical"
@@ -41,14 +42,14 @@ const Register = () => {
           className=" col-md-4 offset-md-5 col-xs-12 bg-light mt-4 pt-4 mb-4 register-form"
         >
           <h3 className="text-center fs-1 fw-bold">Register</h3>
-          <Form.Item label="Name" name="name">
-            <Input type="text" className="register-input" required/>
+          <Form.Item label="user name" name="name">
+            <Input type="text" className="register-input" required />
           </Form.Item>
           <Form.Item label="Email" name="email">
             <Input type="email" className="register-input" required />
           </Form.Item>
           <Form.Item label="Password" name="password">
-            <Input type="password" className="register-input" required />
+            <Input.Password className="register-input" required />
           </Form.Item>
           <Link to="/login" className="m-2">
             Already user login here
@@ -58,7 +59,7 @@ const Register = () => {
           </button>
         </Form>
       </div>
-    <Footer />
+      <Footer />
     </>
   );
 };

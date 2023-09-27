@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/RegiserStyles.css";
-import { Form, Input, message } from "antd";
+import { Form, Input, message} from "antd";
 import { useDispatch } from "react-redux";
 import { showLoading, hideLoading } from "../redux/features/alertSlice";
 import { Link, useNavigate } from "react-router-dom";
@@ -47,8 +47,9 @@ const Login = () => {
           <Form.Item label="Email" name="email">
             <Input type="email" className="register-input" required />
           </Form.Item>
+
           <Form.Item label="Password" name="password">
-            <Input type="password" className="register-input" required />
+            <Input.Password className="register-input" required/>
           </Form.Item>
           <Link to="/register" className="m-2">
             Not a user Register here
@@ -59,7 +60,7 @@ const Login = () => {
           <div className="d-flex align-items-center">
             <p className="m-2">Forgot ?</p>
             <Link to="/forgotPassword" className="m-2">
-               password
+              password
             </Link>
           </div>
         </Form>
